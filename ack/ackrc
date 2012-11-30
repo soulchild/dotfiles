@@ -1,0 +1,24 @@
+# only search with case sensitivity if there is mixed case
+--smart-case
+
+# Always sort
+--sort-files
+
+# No grouping
+--noheading
+--break
+
+# Print 3 lines of context around matching lines
+#--context=3
+
+# Ignore dirs
+--ignore-dir=local_lib
+--ignore-dir=tiny_mce
+
+# No minimized Javascript files
+--type-set=minjs=.min.js
+--no-minjs
+
+# No minimized CSS files
+--type-set=mincss=.min.css
+--no-mincss
