@@ -9,7 +9,7 @@ set smartindent         " do it smart
 set nowrap
 set expandtab           " expand tabs to spaces
 set tabstop=4
-set softtabstop=2
+set softtabstop=4
 set shiftwidth=4        " number of spaces to use for autoindenting
 set nosmarttab          " fuck tabs
 set shiftround          " use multiple of shiftwidth when indenting with '<' and '>'
