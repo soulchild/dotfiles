@@ -1,5 +1,5 @@
 [user]
-	name = Tobias Kremer
+    name = Tobias Kremer
     email = tobias.kremer@gmail.com
 [alias]
     st = status
@@ -9,7 +9,7 @@
     br = branch
     sta = stash
 [core]
-	autocrlf = false
+    autocrlf = false
     safecrlf = true
 [color]
     diff = auto
@@ -20,4 +20,4 @@
 [pull]
     default = current
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
