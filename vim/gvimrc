@@ -1,5 +1,6 @@
-set guifont=Menlo:h14
+:colo ir_black
 :hi Normal guibg=Grey8
+set guifont=Menlo:h14
 set anti
 set lines=999 columns=84
 set guioptions=egmrt
