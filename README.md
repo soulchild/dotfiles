@@ -4,9 +4,11 @@ My personal collection of dotfiles.
 
 ## Install
 
+```sh
 git clone https://github.com/soulchild/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./bootstrap.sh
+```
 
 ## Thanks
 
