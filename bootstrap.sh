@@ -10,3 +10,4 @@ ln -s $DIR/git/gitconfig ~/.gitconfig
 ln -s $DIR/vim/vimrc ~/.vimrc
 ln -s $DIR/vim/gvimrc ~/.gvimrc
 ln -s $DIR/zsh/zshrc ~/.zshrc
+ln -s $DIR/perltidy/perltidyrc ~/.perltidyrc
