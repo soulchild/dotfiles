@@ -1,3 +1,4 @@
+set nocompatible
 set noswapfile
 set nobackup
 
@@ -47,6 +48,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 :highlight CursorLine guibg=#222222
+:filetype indent on
 
 " --------------------------------
 " netrw
@@ -58,6 +60,8 @@ let g:Perldoc_path='/tmp/'
 " Remapping
 " --------------------------------
 noremap K :!perldoc <cword> <bar><bar> perldoc -f <cword><cr>
+
+let mapleader=","
 
 " map ctrl+c and ctrl+v to copy and paste
 nmap <C-V> "+gP
