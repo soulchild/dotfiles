@@ -16,7 +16,7 @@ alias e="mvim --remote-tab-silent 2>/dev/null"
 alias "ls"="ls -G"
 
 # local::lib
-eval `perl -Mlocal::lib=~/perl5`
+# eval `perl -Mlocal::lib=~/perl5`
 
 # Make DBD::mysql work on OS X
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
