@@ -16,10 +16,10 @@ alias e="mvim --remote-tab-silent 2>/dev/null"
 alias "ls"="ls -G"
 
 # local::lib
-# eval `perl -Mlocal::lib=~/perl5`
+eval `perl -Mlocal::lib=~/perl5`
 
 # Make DBD::mysql work on OS X
-export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
+# export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 
 # Include local config
 if [[ -r ~/.zshrc-local ]]; then
@@ -27,3 +27,7 @@ if [[ -r ~/.zshrc-local ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+unsetopt correct
+
+export LC_ALL=de_DE.UTF-8  
+export LANG=de_DE.UTF-8

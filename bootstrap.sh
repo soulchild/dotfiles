@@ -17,3 +17,4 @@ mkdir ~/.vim/colors
 ln -s ~/.dotfiles/vim/ir_black.vim ~/.vim/colors/
 
 curl -L http://cpanmin.us | perl - --sudo App::cpanminus
+cpanm --sudo local::lib
