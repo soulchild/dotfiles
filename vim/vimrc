@@ -89,8 +89,8 @@ set grepprg=grep\ -nH\ $*
 " NERDTree
 " --------------------------------
 let NERDTreeShowBookmarks=1
-map <F13> :NERDTreeToggle<CR> 
-map <F14> !perltidy<CR>
+map <F5> :NERDTreeToggle<CR> 
+map <F6> !perltidy<CR>
 
 let $PAGER = 'less'
 let $LESS = 'dQFe'

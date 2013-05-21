@@ -31,3 +31,5 @@ unsetopt correct
 
 export LC_ALL=de_DE.UTF-8  
 export LANG=de_DE.UTF-8
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
