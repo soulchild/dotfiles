@@ -5,6 +5,9 @@ DIR="$PWD/`dirname $0`"
 echo "Downloading and installing oh-my-zsh..."
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
+echo "Cloning vundle..."
+git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+
 ln -s $DIR/ack/ackrc ~/.ackrc
 ln -s $DIR/git/gitconfig ~/.gitconfig
 ln -s $DIR/vim/vimrc ~/.vimrc
