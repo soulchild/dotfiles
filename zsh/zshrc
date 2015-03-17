@@ -16,10 +16,3 @@ alias "ls"="ls -lG"
 
 export LC_ALL=de_DE.UTF-8  
 export LANG=de_DE.UTF-8
-
-# Include local config
-if [[ -r ~/.zshrc-local ]]; then
-    source ~/.zshrc-local
-fi
-
-PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
