@@ -14,5 +14,6 @@ alias "ls"="ls -lG"
 # Make DBD::mysql work on OS X
 # export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 
-#export LC_ALL=de_DE.UTF-8  
-#export LANG=de_DE.UTF-8
+# Set locale to shut up remote servers complaining about having no valid locale. 
+export LANG=en_US.UTF-8
+export LC_ALL=$LANG
