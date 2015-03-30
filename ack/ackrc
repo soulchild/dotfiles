@@ -19,6 +19,8 @@
 --type-set=minjs=.min.js
 --no-minjs
 
+--pager=less -r
+
 # No minimized CSS files
 --type-set=mincss=.min.css
 --no-mincss
