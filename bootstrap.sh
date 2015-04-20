@@ -16,12 +16,6 @@ function mk_symlink {
 echo "Downloading and installing prezto..."
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-echo "Cloning vundle..."
-git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-
-echo "Cloning z..."
-git clone https://github.com/rupa/z.git ~/.dotfiles/
-
 echo "Installing Homebrew..."
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
@@ -37,8 +31,15 @@ mk_symlink $DIR/ack/ackrc ~/.ackrc
 mk_symlink $DIR/git/gitconfig ~/.gitconfig
 
 # vim
+ln -s $DIR/vim/config ~/.vim/config
+
+echo "Cloning vundle..."
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 mk_symlink $DIR/vim/vimrc ~/.vimrc
 mk_symlink $DIR/vim/gvimrc ~/.gvimrc
+
+echo "Installing vim plugins..."
+vim +PluginInstall +qall
 
 # zsh/prezto
 mv ~/.zshrc ~/.zshrc_default # backup

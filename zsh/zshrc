@@ -17,3 +17,5 @@ alias "ls"="ls -lG"
 # Set locale to shut up remote servers complaining about having no valid locale. 
 export LANG=en_US.UTF-8
 export LC_ALL=$LANG
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
