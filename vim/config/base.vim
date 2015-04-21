@@ -78,10 +78,6 @@ imap <C-T> <ESC><C-T>i
 nmap <C-O> <C-T>:Ex<CR>
 imap <C-O> <ESC><C-O>i
 
-" close tab with ctrl+w
-nmap <C-W> :q<CR>
-imap <C-W> <ESC><C-W>i
-
 " change to directory of current file on editing
 autocmd BufEnter * lcd %:p:h
 
