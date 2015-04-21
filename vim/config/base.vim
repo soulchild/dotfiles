@@ -53,6 +53,8 @@ endif
 
 :highlight CursorLine guibg=#222222
 
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+
 " --------------------------------
 " netrw
 " --------------------------------
