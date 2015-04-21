@@ -65,8 +65,6 @@ let g:netrw_list_hide='^\.svn/$,\.DS_Store'
 " --------------------------------
 let mapleader=","
 
-noremap K :!perldoc <cword> <bar><bar> perldoc -f <cword><cr>
-
 " map ctrl+c and ctrl+v to copy and paste
 nmap <C-V> "+gP
 imap <C-V> <ESC><C-V>i
@@ -92,6 +90,8 @@ nnoremap <Leader>n :NERDTreeTabsToggle<CR>
 
 let $PAGER = 'less'
 let $LESS = 'dQFe'
+
+let g:nerdtree_tabs_open_on_gui_startup=0
 
 " --------------------------------
 " Syntastic
