@@ -13,11 +13,21 @@ function mk_symlink {
   fi
 }
 
-echo "Downloading and installing prezto..."
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+function header {
+  echo
+  printf '=%.0s' {1..80}; echo
+  echo $1
+  printf '=%.0s' {1..80}; echo
+}
+
+header "Prezto"
+if [ ! -d "${ZDOTDIR:-$HOME}" ]
+then
+  echo "Downloading and installing prezto..."
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+fi
 
 # zsh/prezto
-echo "Setting up prezto..."
 mv ~/.zshrc ~/.zshrc_default # backup
 mk_symlink ~/.zprezto/runcoms/zshenv ~/.zshenv
 mk_symlink ~/.zprezto/runcoms/zprofile ~/.zprofile
@@ -25,38 +35,42 @@ mk_symlink $DIR/zsh/zshrc ~/.zshrc
 mk_symlink $DIR/zsh/zpreztorc ~/.zpreztorc
 mk_symlink $DIR/zsh/zprofile ~/.zprofile
 
-echo "Installing Homebrew..."
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew doctor
+# Homebrew
+header "Homebrew"
+if ! command -v brew >/dev/null 2>&1; then
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
-echo "Installing FASD..."
-brew install fasd
+brew update && brew doctor
 
-echo "Installing cmake..."
-brew install cmake
+header "Brewable components"
+brew install fasd cmake macvim the_silver_searcher
 
-echo "Installing powerline fonts..."
+header "Powerline fonts"
 git clone https://github.com/powerline/fonts.git /tmp/powerline-fonts && /tmp/powerline-fonts/install.sh
 
-# ack
-mk_symlink $DIR/ack/ackrc ~/.ackrc
-
+header "Symlinking configs"
 # git
 mk_symlink $DIR/git/gitconfig ~/.gitconfig
 
 # perltidy
 mk_symlink $DIR/perltidy/perltidyrc ~/.perltidyrc
 
+header "Vim"
+
 # vim
+mk_symlink /usr/local/bin/mvim /usr/local/bin/vim
+
 [ ! -L ~/.vim/config ] && mk_symlink $DIR/vim/config ~/.vim/config
 mk_symlink $DIR/vim/vimrc ~/.vimrc
 mk_symlink $DIR/vim/gvimrc ~/.gvimrc
 
-echo "Cloning vundle..."
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+  echo "Installing Vundle..."
+  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
 
-echo "Installing vim plugins..."
+echo "Running PluginInstall..."
 vim +PluginInstall +qall
 
 if [ ! -f ~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so ] 
@@ -66,6 +80,6 @@ then
 fi
 
 # perl
-echo "Installing cpanm and local::lib"
+header "cpanm and local::lib"
 curl -L http://cpanmin.us | perl - --sudo App::cpanminus
 cpanm --sudo local::lib

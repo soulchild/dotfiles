@@ -63,7 +63,7 @@ let g:netrw_list_hide='^\.svn/$,\.DS_Store'
 " --------------------------------
 " Remapping
 " --------------------------------
-let mapleader=","
+let mapleader=" "
 
 " map ctrl+c and ctrl+v to copy and paste
 nmap <C-V> "+gP
