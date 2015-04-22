@@ -80,6 +80,11 @@ then
 fi
 
 # perl
-header "cpanm and local::lib"
+header "Perl"
 curl -L http://cpanmin.us | perl - --sudo App::cpanminus
 cpanm --sudo local::lib
+
+# OSX
+header "OS X"
+./osx/osx.sh
+
