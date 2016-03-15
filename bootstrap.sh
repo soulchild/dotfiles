@@ -84,6 +84,10 @@ header "Perl"
 curl -L http://cpanmin.us | perl - --sudo App::cpanminus
 cpanm --sudo local::lib
 
+# js
+header "JS"
+mk_symlink $DIR/js/jshintrc ~/.jshintrc
+
 # OSX
 header "OS X"
 ./osx/osx.sh
