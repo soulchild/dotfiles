@@ -4,8 +4,15 @@
   // Define globals exposed by jQuery.
   "jquery": true,
 
+  "globals": {
+    "Promise": true
+  },
+
   // Define globals exposed by Node.js.
   "node": true,
+
+  // Define globals exposed by Mocha.
+  "mocha": true,
 
   // Allow ES6.
   "esnext": true,
