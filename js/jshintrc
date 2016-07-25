@@ -1,6 +1,8 @@
 {
   "browser": true,
 
+  "latedef": "nofunc",
+
   // Define globals exposed by jQuery.
   "jquery": true,
 
@@ -37,7 +39,7 @@
   "newcap": true,
 
   // Enforce placing 'use strict' at the top function scope
-  "strict": true,
+  "strict": false,
 
   // Prohibit use of explicitly undeclared variables.
   "undef": true,
