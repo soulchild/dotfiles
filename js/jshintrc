@@ -35,11 +35,13 @@
   // Enforce line length to 100 characters
   "maxlen": 100,
 
+  "laxbreak": true,
+
   // Require capitalized names for constructor functions.
   "newcap": true,
 
   // Enforce placing 'use strict' at the top function scope
-  "strict": false,
+  "strict": true,
 
   // Prohibit use of explicitly undeclared variables.
   "undef": true,

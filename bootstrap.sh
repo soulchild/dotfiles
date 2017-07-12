@@ -53,9 +53,6 @@ header "Symlinking configs"
 # git
 mk_symlink $DIR/git/gitconfig ~/.gitconfig
 
-# perltidy
-mk_symlink $DIR/perltidy/perltidyrc ~/.perltidyrc
-
 header "Vim"
 
 # vim
@@ -65,28 +62,13 @@ mk_symlink /usr/local/bin/mvim /usr/local/bin/vim
 mk_symlink $DIR/vim/vimrc ~/.vimrc
 mk_symlink $DIR/vim/gvimrc ~/.gvimrc
 
-if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
-  echo "Installing Vundle..."
-  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+if [ ! -e "$HOME"/.vim/autoload/plug.vim ]; then
+  echo "Installing vim-plug..."
+  curl -fLo "$HOME"/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 echo "Running PluginInstall..."
-vim +PluginInstall +qall
-
-if [ ! -f ~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so ] 
-then
-  echo "Compiling YouCompleteMe..."
-  cd ~/.vim/bundle/YouCompleteMe && ./install.sh
-fi
-
-# perl
-header "Perl"
-curl -L http://cpanmin.us | perl - --sudo App::cpanminus
-cpanm --sudo local::lib
-
-# js
-header "JS"
-mk_symlink $DIR/js/jshintrc ~/.jshintrc
+vim -u "$HOME"/.vim/config/bundles.vim +PlugInstall +PlugClean! +qa
 
 # OSX
 header "OS X"

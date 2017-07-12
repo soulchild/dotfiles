@@ -1,33 +1,13 @@
-set nocompatible  " be iMproved
-filetype off   		" required
+call plug#begin('~/.vim/plugged')
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-markdown'
+Plug 'leshill/vim-json'
+Plug 'flazz/vim-colorschemes'
 
-Plugin 'gmarik/Vundle.vim'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
 
-" UI improvements
-Plugin 'bling/vim-airline'
-Plugin 'flazz/vim-colorschemes'
+call plug#end()
 
-" Project
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'kien/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-fugitive'
-
-" Code and tab completion
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'ervandew/supertab'
-Plugin 'scrooloose/nerdcommenter'
-
-" Syntax highlighting and checking
-Plugin 'scrooloose/syntastic'
-Plugin 'gregsexton/MatchTag'
-Plugin 'sheerun/vim-polyglot'
-
-call vundle#end()            " required
-filetype plugin indent on    " required

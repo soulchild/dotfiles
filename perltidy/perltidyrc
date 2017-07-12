@@ -1,9 +1,0 @@
--pbp    # Start with Damian's Perl Best Practices
--w      # Show all warnings
--l=115  # Set a maximum line length of 115 characters
--isbc   # Don't indent comments without leading space
--nolq   # Don't outdent long quoted strings
--pt=0   # Least tightness for paren elements.
--sbt=0  # Least tightness for bracket elements.
--bt=0   # Least tightness for brace elements.
--sot    # Stack opening tokens ala Javascript.
