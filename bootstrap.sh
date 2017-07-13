@@ -44,7 +44,10 @@ fi
 brew update && brew doctor
 
 header "Brewable components"
-brew install fasd cmake macvim the_silver_searcher
+brew install fasd cmake macvim the_silver_searcher node
+
+header "Node modules"
+npm install -g prettier
 
 header "Powerline fonts"
 git clone https://github.com/powerline/fonts.git /tmp/powerline-fonts && /tmp/powerline-fonts/install.sh

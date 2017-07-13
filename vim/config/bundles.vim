@@ -1,12 +1,15 @@
+set nocompatible
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-markdown'
 Plug 'leshill/vim-json'
 Plug 'flazz/vim-colorschemes'
+Plug 'morhetz/gruvbox'
 
-Plug 'bling/vim-airline'
+Plug 'othree/yajs.vim'
 Plug 'tpope/vim-surround'
+Plug 'bling/vim-airline'
 Plug 'w0rp/ale'
 
 call plug#end()
