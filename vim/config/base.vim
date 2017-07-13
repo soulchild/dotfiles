@@ -93,8 +93,8 @@ let $LESS = 'dQFe'
 
 let g:nerdtree_tabs_open_on_gui_startup=0
 
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier', 'eslint']
+let g:ale_fixers = {'javascript': ['prettier-eslint']}
+let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
 let g:airline#extensions#ale#enabled = 1
