@@ -4,7 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Aliases
-export EDITOR="vim"
+export EDITOR="nvim"
 alias e="mvim --remote-tab-silent 2>/dev/null"
 alias "ls"="ls -lG"
 

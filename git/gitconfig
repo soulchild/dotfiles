@@ -12,6 +12,7 @@
     autocrlf = false
     safecrlf = true
 	excludesfile = /Users/tkremer/.gitignore_global
+	editor = nvim
 [color]
     diff = auto
     status = auto

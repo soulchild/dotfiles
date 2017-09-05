@@ -44,7 +44,7 @@ fi
 brew update && brew doctor
 
 header "Brewable components"
-brew install fasd cmake macvim the_silver_searcher node
+brew install fasd cmake the_silver_searcher node nvim
 
 header "Node modules"
 npm install -g prettier

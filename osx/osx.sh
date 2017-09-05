@@ -269,11 +269,14 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
+# Disable dock resizing
+defaults write com.apple.dock size-immutable -bool true
+
+# Set dock icon tile size 
+defaults write com.apple.dock tilesize -int 28
+
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
-
-# Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
 
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
