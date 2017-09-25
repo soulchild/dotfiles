@@ -44,13 +44,16 @@ fi
 brew update && brew doctor
 
 header "Brewable components"
-brew install fasd cmake the_silver_searcher node nvim
+brew install fasd cmake the_silver_searcher node neovim
+brew tap caskroom/fonts
+brew cask install font-sourcecodepro-nerd-font
 
 header "Node modules"
 npm install -g prettier
 
-header "Powerline fonts"
-git clone https://github.com/powerline/fonts.git /tmp/powerline-fonts && /tmp/powerline-fonts/install.sh
+header "Prezto clean prompt"
+git clone https://github.com/cdonohue/prezto-clean-prompt.git ~/.zprezto/modules/prompt/external/clean
+ln -sf ~/.zprezto/modules/prompt/external/clean/prompt_clean_setup ~/.zprezto/modules/prompt/functions
 
 header "Symlinking configs"
 # git
