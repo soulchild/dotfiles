@@ -4,23 +4,21 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Aliases
-export EDITOR="nvim"
-alias e="mvim --remote-tab-silent 2>/dev/null"
 alias "ls"="ls -lG"
-
 alias ssl_pk="openssl genrsa -out domain.key 4096"
 alias ssl_csr="openssl req -new -sha256 -key ./domain.key -out domain.csr"
 
 # local::lib
 [ $SHLVL -eq 1 ] && eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
 
-# Make DBD::mysql work on OS X
-# export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
-
 # Set locale to shut up remote servers complaining about having no valid locale. 
 export LANG=en_US.UTF-8
 export LC_ALL=$LANG
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Lorem ipsum
+function ipsum() { 
+  curl -s http://metaphorpsum.com/sentences/$@ | pbcopy ;
+}
 
 . ~/.zshrc.local
