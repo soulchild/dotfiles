@@ -46,7 +46,7 @@ brew update && brew doctor
 header "Brewable components"
 brew install fasd cmake the_silver_searcher node neovim
 brew tap caskroom/fonts
-brew cask install font-sourcecodepro-nerd-font
+brew cask install font-hack-nerd-font
 
 header "Node modules"
 npm install -g prettier
@@ -62,8 +62,6 @@ mk_symlink $DIR/git/gitconfig ~/.gitconfig
 header "Vim"
 
 # vim
-mk_symlink /usr/local/bin/mvim /usr/local/bin/vim
-
 [ ! -L ~/.vim/config ] && mk_symlink $DIR/vim/config ~/.vim/config
 mk_symlink $DIR/vim/vimrc ~/.vimrc
 mk_symlink $DIR/vim/gvimrc ~/.gvimrc
