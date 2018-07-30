@@ -46,7 +46,7 @@ brew update && brew doctor
 header "Brewable components"
 brew install fasd cmake the_silver_searcher node neovim
 brew tap caskroom/fonts
-brew cask install font-hack-nerd-font
+brew cask install font-meslo-nerd-font
 
 header "Node modules"
 npm install -g prettier
